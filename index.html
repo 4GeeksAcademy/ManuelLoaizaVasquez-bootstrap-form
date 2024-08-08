@@ -16,169 +16,173 @@
     />
   </head>
   <body>
-    <div class="card w-75 mx-auto mt-5">
-      <div class="card-header bg-light">
-        <h2 class="mb-0">Payment form example</h2>
-      </div>
-      <!-- REMARK: Splitting them made my padding consisting througout my card sections -->
-      <div class="card-body">
-        <div class="container p-0">
-          <div class="alert alert-danger">Some fields are missing</div>
-          <div class="row">
-            <div class="col-5">
-              <div class="mb-3">
-                <label for="cardNumber">Card #</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="cardNumber"
-                  placeholder="XXXXXXXXXXXXXXXX"
-                />
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="mb-3">
-                <label for="cvcNumber">CVC #</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="cvcNumber"
-                  placeholder="0000"
-                />
-              </div>
-            </div>
-            <!-- DOUBT: Adding me-1 to the dollar inside the input group doesn't seem clean. Any advice for this scenario? -->
-            <div class="col-4">
-              <div class="mb-3">
-                <label for="usdAmount">Amount</label>
-                <div class="input-group">
-                  <i class="fa-solid fa-dollar-sign me-1"></i>
+    <form>
+      <div class="card w-75 mx-auto mt-5">
+        <div class="card-header bg-light">
+          <h2 class="mb-0">Payment form example</h2>
+        </div>
+        <!-- REMARK: Splitting them made my padding consisting througout my card sections -->
+        <div class="card-body">
+          <div class="container p-0">
+            <div class="d-none alert alert-danger">Some fields are missing.</div>
+            <div class="row">
+              <div class="col-5">
+                <div class="mb-3">
+                  <label for="card-number">Card #</label>
                   <input
                     type="number"
                     class="form-control"
-                    id="usdAmount"
-                    placeholder="Amount"
+                    id="card-number"
+                    placeholder="XXXXXXXXXXXXXXXX"
                   />
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="mb-3">
-                <label for="firstName">First Name</label>
-                <input type="text" class="form-control" id="firstName" />
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="cvc-number">CVC #</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="cvc-number"
+                    placeholder="0000"
+                  />
+                </div>
               </div>
-            </div>
-            <div class="col-6">
-              <div class="mb-3">
-                <label for="lastName">Last Name</label>
-                <input type="text" class="form-control" id="lastName" />
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="mb-3">
-                <label for="city">City</label>
-                <input type="text" class="form-control" id="city" />
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="mb-3">
-                <label for="state">State</label>
-                <select class="form-select" id="state">
-                  <option selected>Pick a state</option>
-                  <option>Lima</option>
-                  <option>Cusco</option>
-                  <option>Arequipa</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="mb-3">
-                <label for="postalCode">Postal Code</label>
-                <input type="number" class="form-control" id="postalCode" />
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="mb-3">
-                <p>We accept</p>
-                <!-- TODO: Change the size of the radio elements to small. -->
-                <div
-                  class="d-inline-flex flex-row gap-4 rounded bg-secondary py-1 px-2"
-                >
-                  <div class="form-check">
+              <!-- DOUBT: Adding me-1 to the dollar inside the input group doesn't seem clean. Any advice for this scenario? -->
+              <div class="col-4">
+                <div class="mb-3">
+                  <label for="usd-amount">Amount</label>
+                  <div class="input-group">
+                    <i class="fa-solid fa-dollar-sign me-1"></i>
                     <input
-                      class="form-check-input bg-light"
-                      type="radio"
-                      name="paymentsRadio"
-                      id="masterCard"
+                      type="number"
+                      class="form-control"
+                      id="usd-amount"
+                      placeholder="Amount"
                     />
-                    <label class="form-check-label" for="masterCard">
-                      <i class="fa-brands fa-cc-mastercard text-white"></i>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input bg-light"
-                      type="radio"
-                      name="paymentsRadio"
-                      id="visa"
-                    />
-                    <label class="form-check-label" for="visa">
-                      <i class="fa-brands fa-cc-visa text-white"></i>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input bg-light"
-                      type="radio"
-                      name="paymentsRadio"
-                      id="dinersClub"
-                    />
-                    <label class="form-check-label" for="dinersClub">
-                      <i class="fa-brands fa-cc-diners-club text-white"></i>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input bg-light"
-                      type="radio"
-                      name="paymentsRadio"
-                      id="amex"
-                    />
-                    <label class="form-check-label" for="amex">
-                      <i class="fa-brands fa-cc-amex text-white"></i>
-                    </label>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-6">
-              <div class="mb-3">
-                <label for="textArea">Message</label>
-                <textarea class="form-control" id="textArea"></textarea>
-                <p class="text-secondary fs-6">Add any notes here.</p>
+            <div class="row">
+              <div class="col-6">
+                <div class="mb-3">
+                  <label for="first-name">First Name</label>
+                  <input type="text" class="form-control" id="first-name" />
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="mb-3">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" class="form-control" id="last-name" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="mb-3">
+                  <label for="city">City</label>
+                  <input type="text" class="form-control" id="city" />
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="state">State</label>
+                  <select class="form-select" id="state">
+                    <option selected>Pick a state</option>
+                    <option>Lima</option>
+                    <option>Cusco</option>
+                    <option>Arequipa</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="postal-code">Postal Code</label>
+                  <input type="number" class="form-control" id="postal-code" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="mb-3">
+                  <p>We accept</p>
+                  <!-- TODO: Change the size of the radio elements to small. -->
+                  <div
+                    class="d-inline-flex flex-row gap-4 rounded bg-secondary py-1 px-2"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input bg-light"
+                        type="radio"
+                        name="paymentsRadio"
+                        id="mastercard"
+                      />
+                      <label class="form-check-label" for="mastercard">
+                        <i class="fa-brands fa-cc-mastercard text-white"></i>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input bg-light"
+                        type="radio"
+                        name="paymentsRadio"
+                        id="visa"
+                      />
+                      <label class="form-check-label" for="visa">
+                        <i class="fa-brands fa-cc-visa text-white"></i>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input bg-light"
+                        type="radio"
+                        name="paymentsRadio"
+                        id="diners-club"
+                      />
+                      <label class="form-check-label" for="diners-club">
+                        <i class="fa-brands fa-cc-diners-club text-white"></i>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input bg-light"
+                        type="radio"
+                        name="paymentsRadio"
+                        id="amex"
+                      />
+                      <label class="form-check-label" for="amex">
+                        <i class="fa-brands fa-cc-amex text-white"></i>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="mb-3">
+                  <label for="text-area">Message</label>
+                  <textarea class="form-control" id="text-area"></textarea>
+                  <p class="text-secondary fs-6">Add any notes here.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- REMARK: I had to split the footer and the container for not having issues with the background color -->
-      <div class="card-footer bg-light">
-        <div class="container d-flex flex-row-reverse gap-1 p-0">
-          <button type="button" class="btn btn-secondary">Cancel</button>
-          <button type="button" class="btn btn-primary">Send</button>
+        <!-- REMARK: I had to split the footer and the container for not having issues with the background color -->
+        <div class="card-footer bg-light">
+          <div class="container d-flex flex-row-reverse gap-1 p-0">
+            <!-- TODO: Change this type="submit" once I know how to prevent the submission to be done from JS -->
+            <button type="button" class="btn btn-primary" id="submit-button">Send</button>
+            <button type="button" class="btn btn-secondary" id="cancel-button">Cancel</button>
+          </div>
         </div>
       </div>
-    </div>
+    </form>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js"></script>
   </body>
 </html>
